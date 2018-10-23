@@ -1,0 +1,64 @@
+<mat-card>
+  <mat-card-title>Sign Up for Selfie</mat-card-title>
+  <div class=" row">
+    <mat-form-field class="col">
+      <input matInput placeholder="First Name" [(ngModel)]="registerData.name" #ctrl="ngModel" name="name">
+    </mat-form-field>
+
+    <mat-form-field class="col">
+      <input matInput placeholder="Last Name" [(ngModel)]="registerData.lastname" #ctrl="ngModel" name="lastname">
+    </mat-form-field>
+
+  </div>
+
+  <div class=" row">
+    <mat-form-field class="col">
+      <input matInput placeholder="Email" [(ngModel)]="registerData.email" #ctrl="ngModel" name="email">
+    </mat-form-field>
+    <mat-form-field class="col">
+      <input matInput placeholder="Password" type="password" [(ngModel)]="registerData.pwd" name="password" placehoder="password">
+    </mat-form-field>
+
+  </div>
+
+  <div class=" row">
+    <mat-form-field class="col">
+      <input matInput placeholder="Phone No" [(ngModel)]="registerData.phone" #ctrl="ngModel" name="phone">
+    </mat-form-field>
+    <mat-form-field class="col">
+      <mat-select placeholder="I am">
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class=" row">
+    <mat-form-field class="col">
+      <mat-select placeholder="Month">
+        <mat-option value="jan">Jan</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="col">
+      <mat-select placeholder="Day">
+        <mat-option value="mon">Mon</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="col">
+      <mat-select placeholder="Year">
+        <mat-option value="2018">2018</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="col">
+      <textarea matInput placeholder="About Me" [(ngModel)]="registerData.description" rows="5" #ctrl="ngModel" name="description"></textarea>
+    </mat-form-field>
+  </div>
+
+  <div class=" row">
+    <div class="col">
+      <button mat-flat-button color="primary" (click)="post()">Sign up & Login</button>
+    </div>
+  </div>
+</mat-card>

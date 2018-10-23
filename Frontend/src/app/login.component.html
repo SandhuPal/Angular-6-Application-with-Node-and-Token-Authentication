@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+  <div class="row">
+    <div class="col-6">
+      <div class="row">
+        <mat-form-field class="col-12">
+          <input matInput [(ngModel)]="loginData.email" #ctrl="ngModel" name="email">
+        </mat-form-field>
+
+        <mat-form-field class="col-12">
+          <input matInput type="password" [(ngModel)]="loginData.pwd" name="password">
+        </mat-form-field>
+
+        <div class="col-12"><button (click)="post()" type="button" class="btn btn-primary">Sign in</button></div>
+      </div>
+    </div>
+  </div>
+</mat-card>
